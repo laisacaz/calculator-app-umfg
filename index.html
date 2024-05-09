@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Despesas e Receitas Mensais</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Despesas e Receitas Mensais</h1>
+        <div class="input-section">
+            <label for="income">Receitas (+)</label>
+            <input type="text" id="incomeDescription" placeholder="Descrição">
+            <input type="number" id="income" placeholder="Valor">
+            <button class="button-income" onclick="addIncome()">Adicionar (+)</button>
+        </div>
+        <div class="input-section">           
+            <label for="expense">Despesas (-)</label>
+            <input type="text" id="expenseDescription" placeholder="Descrição" class="expense-description">
+            <input type="number" id="expense" placeholder="Valor">
+            <button class="button-expense" onclick="addExpense()">Adicionar (-)</button>                              
+        </div>       
+        <div class="result-section">
+            <h2>Resultado</h2>
+            <div class="result-details">                
+                <div class="result-item">
+                    <p>Total de Receitas:</p>
+                    <p id="totalIncome">R$ 0,00</p>
+                </div>
+                <div class="result-item">
+                    <p>Total de Despesas:</p>
+                    <p id="totalExpense">R$ 0,00</p>
+                </div>
+                <div class="result-item">
+                    <p>Saldo Mensal:</p>
+                    <p id="monthlyBalance">R$ 0,00</p>
+                </div>
+            </div>
+        </div>
+        <div class="record-section">
+            <div id="monthlyExpenses">
+                <!-- Aqui serão exibidas as despesas do mês -->
+            </div>
+        </div>
+
+        <div class="record-section">
+            <div id="monthlyIncomes">
+                <!-- Aqui serão exibidas as receitas do mês -->
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
