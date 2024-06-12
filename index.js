@@ -1,11 +1,11 @@
 let monthlyRecords = [];
 
 function addExpense() {
-  const expenseDescription =
-    document.getElementById("expenseDescription").value;
+  const expenseDescription = document.getElementById("expenseDescription").value;
   const expenseValue = parseFloat(document.getElementById("expense").value);
   if (expenseDescription.trim() !== "" && !isNaN(expenseValue)) {
     monthlyRecords.push({
+      id: Date.now(),
       type: "Despesa",
       description: expenseDescription,
       value: expenseValue,
@@ -20,6 +20,7 @@ function addIncome() {
   const incomeValue = parseFloat(document.getElementById("income").value);
   if (incomeDescription.trim() !== "" && !isNaN(incomeValue)) {
     monthlyRecords.push({
+      id: Date.now(),
       type: "Receita",
       description: incomeDescription,
       value: incomeValue,
@@ -38,14 +39,14 @@ function updateMonthlyRecords() {
 
   monthlyRecords.forEach((record) => {
     if (record.type === "Despesa") {
-      expenseHTML += `<p>${record.description} : R$ ${record.value.toFixed(
-        2
-      )}</p>`;
+      expenseHTML += `
+        <p>${record.description} : R$ ${record.value.toFixed(2)}
+        <button class="button-delete" onclick="deleteRecord(${record.id})">Excluir</button></p>`;
       hasExpenses = true;
     } else {
-      incomeHTML += `<p>${record.description} : R$ ${record.value.toFixed(
-        2
-      )}</p>`;
+      incomeHTML += `
+        <p>${record.description} : R$ ${record.value.toFixed(2)}
+        <button class="button-delete" onclick="deleteRecord(${record.id})">Excluir</button></p>`;
       hasIncomes = true;
     }
   });
@@ -55,12 +56,22 @@ function updateMonthlyRecords() {
 
   if (hasExpenses) {
     monthlyExpenses.innerHTML = expenseHTML;
+  } else {
+    monthlyExpenses.innerHTML = "<p>Sem despesas</p>";
   }
+  
   if (hasIncomes) {
     monthlyIncomes.innerHTML = incomeHTML;
+  } else {
+    monthlyIncomes.innerHTML = "<p>Sem receitas</p>";
   }
 
   updateTotals();
+}
+
+function deleteRecord(id) {
+  monthlyRecords = monthlyRecords.filter(record => record.id !== id);
+  updateMonthlyRecords();
 }
 
 function updateTotals() {
@@ -73,16 +84,10 @@ function updateTotals() {
       totalExpense += record.value;
     }
   });
-  document.getElementById(
-    "totalIncome"
-  ).textContent = `R$ ${totalIncome.toFixed(2)}`;
-  document.getElementById(
-    "totalExpense"
-  ).textContent = `R$ ${totalExpense.toFixed(2)}`;
+  document.getElementById("totalIncome").textContent = `R$ ${totalIncome.toFixed(2)}`;
+  document.getElementById("totalExpense").textContent = `R$ ${totalExpense.toFixed(2)}`;
   const monthlyBalance = totalIncome - totalExpense;
-  document.getElementById(
-    "monthlyBalance"
-  ).textContent = `R$ ${monthlyBalance.toFixed(2)}`;
+  document.getElementById("monthlyBalance").textContent = `R$ ${monthlyBalance.toFixed(2)}`;
 }
 
 function clearExpenseInputs() {

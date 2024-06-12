@@ -45,11 +45,13 @@ h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button-income:hover {
   background-color: #45a049;
 }
+
 .button-expense {
   width: 100px;
   padding: 8px 0;
@@ -59,11 +61,13 @@ h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button-expense:hover {
   background-color: rgb(194, 2, 2);
 }
+
 .result-section {
   border-top: 1px solid #ccc;
   padding-top: 20px;
@@ -95,9 +99,47 @@ h1 {
 .result-item p:first-child {
   font-weight: bold;
 }
+
 .expense-description {
   width: calc(100% - 200px);
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.record-section {
+  margin-bottom: 20px;
+}
+
+.record-section h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.record-section p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.button-delete {
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-delete:hover {
+  background-color: #e04848;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
