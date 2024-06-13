@@ -5,6 +5,31 @@ body {
   background-color: #f2f2f2;
 }
 
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 16px;
+}
+
 .container {
   max-width: 800px;
   margin: 50px auto;
@@ -30,22 +55,25 @@ h1 {
 }
 
 .input-section input {
-  width: calc(100% - 630px);
+  width: calc(100% - 220px);
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-.button-income {
+.button-income, .button-expense {
   width: 100px;
   padding: 8px 0;
   margin-left: 10px;
-  background-color: #4caf50;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.button-income {
+  background-color: #4caf50;
 }
 
 .button-income:hover {
@@ -53,15 +81,7 @@ h1 {
 }
 
 .button-expense {
-  width: 100px;
-  padding: 8px 0;
-  margin-left: 10px;
   background-color: rgb(255, 87, 87);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .button-expense:hover {
@@ -101,7 +121,7 @@ h1 {
 }
 
 .expense-description {
-  width: calc(100% - 200px);
+  width: calc(100% - 220px);
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
