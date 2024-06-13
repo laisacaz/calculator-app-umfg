@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Calculadora de despesas e receitas mensais</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="menu">
+    <div class="user-info">
+     
+      <span class="user-name">Admin</span>
+    </div>
+  </div>
+  <div class="container">
+    <h1>Dashboard</h1>
+
+    <div class="summary-section">
+      <h2>Resumo Mensal</h2>
+      <div class="summary-details">
+        <div class="summary-item">
+          <p>Total de Receitas:</p>
+          <p id="dashboardTotalIncome">R$ 0,00</p>
+        </div>
+        <div class="summary-item">
+          <p>Total de Despesas:</p>
+          <p id="dashboardTotalExpense">R$ 0,00</p>
+        </div>
+        <div class="summary-item">
+          <p>Saldo Mensal:</p>
+          <p id="dashboardMonthlyBalance">R$ 0,00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <h2>Gráfico de Receitas e Despesas</h2>
+      <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="goals-section">
+      <h2>Metas Financeiras</h2>
+      <div class="goal-item">
+        <p>Meta de Economia para Viagem:</p>
+        <p>R$ 1.000,00</p>
+      </div>
+      <div class="goal-item">
+        <p>Meta de Pagamento de Dívida:</p>
+        <p>R$ 500,00</p>
+      </div>
+    </div>
+
+    <div class="transactions-section">
+      <h2>Últimas Transações</h2>
+      <div class="transaction-item">
+        <p>Receita - Salário</p>
+        <p>R$ 3.000,00</p>
+      </div>
+      <div class="transaction-item">
+        <p>Despesa - Aluguel</p>
+        <p>R$ 1.200,00</p>
+      </div>
+      <div class="transaction-item">
+        <p>Despesa - Supermercado</p>
+        <p>R$ 500,00</p>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

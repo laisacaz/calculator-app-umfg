@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-name {
+    font-size: 16px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .summary-section {
+    margin-bottom: 30px;
+  }
+  
+  .summary-details {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .summary-item {
+    text-align: center;
+  }
+  
+  .chart-section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .goals-section {
+    margin-bottom: 30px;
+  }
+  
+  .goal-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .transactions-section {
+    margin-bottom: 30px;
+  }
+  
+  .transaction-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  
